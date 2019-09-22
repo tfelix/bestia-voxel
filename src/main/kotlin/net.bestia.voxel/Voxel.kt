@@ -30,5 +30,15 @@ data class Voxel private constructor(
 
             return Voxel(material, quantized and UPPER_BOUND_MASK)
         }
+
+        fun of(material: MaterialRef, occupancy: Byte): Voxel {
+            val clippedOccupancy = when {
+                occupancy < 0 -> 0
+                occupancy > 32 -> 32
+                else -> occupancy
+            }
+
+            return Voxel(material, clippedOccupancy and UPPER_BOUND_MASK)
+        }
     }
 }

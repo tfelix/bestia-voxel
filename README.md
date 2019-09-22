@@ -16,3 +16,15 @@ Which leaves me with the following specs:
 
 * Up to 2048 different materials
 * 64 quantization levels for voxel occupation
+
+## Usage
+
+Include this dependency into your Gradle project (or adapt it for Maven accordingly):
+
+```
+implement 'de.tfelix:bestia-voxel:1.0.0'
+```
+
+Make sure the **JCenter repository** is used.
+
+TODO

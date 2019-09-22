@@ -13,6 +13,7 @@ class ChunkRawSerializerTest {
   @Test
   fun `serializing an chunk of empty voxel works`() {
     val writeChunk = Chunk.makeEmpy()
+    writeChunk.setVoxel(Vector3(0, 0, 0), Voxel.of(1, 0.5f))
     val data = writer.write(writeChunk)
     assertEquals(16, data.size)
 

@@ -1,0 +1,23 @@
+---
+language: java
+sudo: false
+
+# configure caching (https://docs.travis-ci.com/user/languages/java/#Caching)
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+# format from https://docs.travis-ci.com/user/caching/#Enabling-multiple-caching-features
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+deploy:
+  provider: bintray
+  dry_run: true
+  file: "bintray.json"
+  user: "USER"
+  key: "API_KEY"
+  passphrase: "Optional. In case a passphrase is configured on Bintray and GPG signing is used"
+  skip_cleanup: true
+  on:
+    tags: true
