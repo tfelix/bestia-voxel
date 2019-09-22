@@ -15,9 +15,8 @@ deploy:
   provider: bintray
   dry_run: true
   file: "bintray.json"
-  user: "USER"
-  key: "API_KEY"
-  passphrase: "Optional. In case a passphrase is configured on Bintray and GPG signing is used"
+  user: "tfelix"
+  key: $BINTRAY_API_KEY
   skip_cleanup: true
   on:
     tags: true
