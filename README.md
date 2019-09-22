@@ -1,5 +1,7 @@
 # Bestia-Voxel
 
+[![Build Status](https://travis-ci.org/tfelix/bestia-voxel.svg)](https://travis-ci.org/tfelix/bestia-voxel)
+
 This aims to be a slim and small library around efficient voxel storage and retrieval for massive game worlds.
 
 It is heavily inspired by thoughts from the [roblox blog post](https://blog.roblox.com/2017/04/voxel-terrain-storage/)
